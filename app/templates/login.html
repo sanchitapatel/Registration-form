@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <header></header>
+    <style>
+        h2{
+            background-color: rgb(194, 149, 14);
+            font-weight: 400;
+            font-family: 'Times New Roman', Times, serif;
+
+        }
+        form{
+            
+            color: rgb(48, 5, 5);
+            border-radius: 20px;
+            border: 2px solid black;
+            background-color: rgb(47, 67, 67);
+            color: aqua;
+
+        }
+       
+</style>
+<title><h2>Registration form</h2></title>
+
+<form action="{% url 'login' %}" method="post"> 
+    {% csrf_token %}
+    <center>{{key}}
+        <h2>login form</h2>
+        
+       
+        Email:<input type="email" name="email"><br></br>
+        Password:<input type="password" name="password"><br></br>
+       
+
+           
+           <input type="submit" value="login">
+           
+    </center>
+</form>
+</html>
